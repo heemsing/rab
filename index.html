@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Рабочий дом в Москве — помощь людям, оказавшимся в трудной жизненной ситуации | Бесплатное проживание и трудоустройство</title>
+    <meta name="description" content="Рабочий дом в Москве оказывает помощь людям, оказавшимся в трудной жизненной ситуации. Бесплатное проживание и питание, временная работа с оплатой, восстановление документов, психологическая поддержка.">
+    <meta name="keywords" content="рабочий дом москва помощь людям, помощь людям в трудной жизненной ситуации, социальный рабочий дом, бесплатное проживание и питание, трудоустройство и адаптация, восстановление документов, временная работа с оплатой, поддержка бездомных и безработных, социальная поддержка в Москве">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: #0d6efd;
+            color: white;
+            padding: 20px 0;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        
+        .contact-info {
+            text-align: right;
+        }
+        
+        .contact-info p {
+            margin-bottom: 5px;
+        }
+        
+        .phone {
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+        }
+        
+        .whatsapp-btn, .telegram-btn {
+            display: inline-block;
+            margin-top: 5px;
+            padding: 5px 10px;
+            background-color: #25d366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+        
+        .telegram-btn {
+            background-color: #0088cc;
+        }
+        
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23f0f8ff"/></svg>');
+            background-size: cover;
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+        
+        .service-card {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .service-card h3 {
+            color: #0d6efd;
+            margin-bottom: 10px;
+        }
+        
+        .cta-main {
+            background-color: #28a745;
+            color: white;
+            padding: 40px;
+            text-align: center;
+            border-radius: 10px;
+            margin: 40px 0;
+        }
+        
+        .cta-main h2 {
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: #ffc107;
+            color: #000;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            margin: 10px;
+        }
+        
+        .btn-phone {
+            background-color: #dc3545;
+            color: white;
+        }
+        
+        .section {
+            padding: 60px 0;
+        }
+        
+        h2 {
+            color: #0d6efd;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: #495057;
+            margin: 20px 0 10px;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .offer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .offer-item {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        .offer-item h3 {
+            color: #0d6efd;
+        }
+        
+        .who-we-help-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .help-item {
+            background: #e9ecef;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: center;
+        }
+        
+        .process-steps {
+            counter-reset: step-counter;
+        }
+        
+        .step {
+            position: relative;
+            padding-left: 60px;
+            margin-bottom: 30px;
+            min-height: 80px;
+        }
+        
+        .step::before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 40px;
+            height: 40px;
+            background-color: #0d6efd;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .faq-item {
+            margin-bottom: 20px;
+            border: 1px solid #dee2e6;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            background-color: #f8f9fa;
+            padding: 15px 20px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        
+        .faq-answer {
+            padding: 15px 20px;
+            background-color: white;
+        }
+        
+        .testimonials {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .testimonial {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 40px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-section h3 {
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-section a {
+            color: #adb5bd;
+            text-decoration: none;
+        }
+        
+        .footer-section a:hover {
+            text-decoration: underline;
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #495057;
+            color: #adb5bd;
+        }
+        
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            .contact-info {
+                text-align: center;
+                margin-top: 15px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .hero {
+                padding: 40px 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">Рабочий дом в Москве</div>
+                <div class="contact-info">
+                    <p><span class="phone">+7 (495) 123-45-67</span></p>
+                    <p>
+                        <a href="https://wa.me/74951234567" class="whatsapp-btn">WhatsApp</a>
+                        <a href="https://t.me/workinghouse_moscow" class="telegram-btn">Telegram</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Рабочий дом в Москве — помощь людям в трудной жизненной ситуации</h1>
+            <p class="subtitle">Мы предоставляем бесплатное проживание и питание, временную работу с оплатой, помощь в восстановлении документов и социальную поддержку тем, кто оказался в сложной жизненной ситуации.</p>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Бесплатное проживание</h3>
+                    <p>Теплое место для ночлега и уютная комната</p>
+                </div>
+                <div class="service-card">
+                    <h3>Питание</h3>
+                    <p>Полноценные горячие приемы пищи</p>
+                </div>
+                <div class="service-card">
+                    <h3>Временная работа</h3>
+                    <p>Оплата труда для обеспечения себя</p>
+                </div>
+                <div class="service-card">
+                    <h3>Восстановление документов</h3>
+                    <p>Помощь в оформлении паспорта, СНИЛС и других документов</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-main">
+        <div class="container">
+            <h2>Получите помощь прямо сейчас</h2>
+            <p>Не откладывайте решение проблемы — свяжитесь с нами сегодня</p>
+            <a href="tel:+74951234567" class="btn btn-phone">Позвонить</a>
+            <a href="#form" class="btn">Оставить заявку</a>
+            <a href="https://wa.me/74951234567" class="btn">WhatsApp</a>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Что такое Рабочий дом</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Рабочий дом в Москве — это социальная организация, оказывающая помощь людям, оказавшимся в трудной жизненной ситуации. Мы не коммерческая структура, а благотворительный проект, созданный для поддержки тех, кто потерял жилье, средства к существованию или документы.</p>
+                    
+                    <p>Наша миссия — вернуть людям надежду, уверенность в завтрашнем дне и помочь встать на ноги. Мы работаем с 2010 года и за это время помогли тысячам человек восстановиться после кризисных ситуаций и начать новую жизнь.</p>
+                    
+                    <p>Безопасность и конфиденциальность наших подопечных — наш главный приоритет. Мы гарантируем уважительное отношение, профессиональную помощь и полную анонимность.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Что мы предлагаем</h2>
+            <div class="offer-grid">
+                <div class="offer-item">
+                    <h3>Бесплатное жильё и питание</h3>
+                    <p>Уютные комнаты с необходимыми удобствами, регулярное питание. Мы обеспечиваем безопасное и комфортное место для проживания на время восстановления.</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Возможность официальной или временной работы с оплатой</h3>
+                    <p>Помогаем найти временную работу с оплатой, чтобы вы могли обеспечить себя и начать восстанавливать финансовую стабильность.</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Помощь с восстановлением документов</h3>
+                    <p>Юридическая поддержка в оформлении паспорта, СНИЛС, ИНН, трудовой книжки и других важных документов.</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Психологическая и социальная поддержка</h3>
+                    <p>Профессиональные психологи и социальные работники оказывают поддержку в преодолении трудностей и адаптации к новым условиям.</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Социальная адаптация и помощь в дальнейшем устройстве</h3>
+                    <p>Помощь в поиске постоянной работы, жилья, обучении навыкам самостоятельной жизни и планировании будущего.</p>
+                </div>
+                <div class="offer-item">
+                    <h3>Консультации и правовая защита</h3>
+                    <p>Правовая поддержка, помощь в общении с государственными органами и защита ваших законных прав и интересов.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Кому мы помогаем</h2>
+            <div class="who-we-help-grid">
+                <div class="help-item">
+                    <h3>Люди без жилья</h3>
+                    <p>Тем, кто потерял крышу над головой и нуждается в безопасном месте для проживания.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Безработные</h3>
+                    <p>Людям, потерявших работу и источники дохода, нуждающимся во временной поддержке.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Люди, потерявшие документы</h3>
+                    <p>Тем, кто потерял паспорт, СНИЛС, ИНН и другие важные документы.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Освободившиеся из мест лишения свободы</h3>
+                    <p>Помощь в социальной адаптации после отбытия наказания.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Те, кто оказался в трудной жизненной ситуации</h3>
+                    <p>Людям, столкнувшимся с кризисом из-за болезни, потери близких, конфликта в семье и других обстоятельств.</p>
+                </div>
+                <div class="help-item">
+                    <h3>Родные людей, ищущие помощь</h3>
+                    <p>Семьям и друзьям, которые ищут поддержку для своих близких, оказавшихся в трудной ситуации.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Как это работает</h2>
+            <div class="process-steps">
+                <div class="step">
+                    <h3>Позвоните или оставьте заявку</h3>
+                    <p>Свяжитесь с нами по телефону, через WhatsApp или заполните форму на сайте. Наши специалисты ответят на все вопросы и расскажут о возможностях.</p>
+                </div>
+                <div class="step">
+                    <h3>Консультация и инструкция, как добраться</h3>
+                    <p>Мы проведем предварительную консультацию, объясним, как добраться до рабочего дома, какие документы взять с собой и что ожидать.</p>
+                </div>
+                <div class="step">
+                    <h3>Заселение и обеспечение</h3>
+                    <p>После прибытия вас заселят, обеспечат одеждой, средствами гигиены, питанием и объяснят правила проживания.</p>
+                </div>
+                <div class="step">
+                    <h3>Трудоустройство</h3>
+                    <p>Наши специалисты помогут найти временную работу с оплатой, подходящую вашим навыкам и состоянию здоровья.</p>
+                </div>
+                <div class="step">
+                    <h3>Поддержка и адаптация</h3>
+                    <p>Во время пребывания в рабочем доме вы получаете психологическую поддержку, помощь в восстановлении документов и планировании дальнейшей жизни.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Частые вопросы</h2>
+            <div class="faq-item">
+                <div class="faq-question">Нужно ли платить за проживание в рабочем доме?</div>
+                <div class="faq-answer">
+                    <p>Нет, проживание и питание в рабочем доме предоставляются абсолютно бесплатно. Это социальная поддержка для людей, оказавшихся в трудной жизненной ситуации. Единственное, что может потребоваться, — это небольшая плата за дополнительные услуги (например, химчистка одежды или покупка личных вещей).</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Какие документы нужны для заселения?</div>
+                <div class="faq-answer">
+                    <p>Для заселения в рабочий дом желательно иметь паспорт. Если паспорта нет, мы поможем с восстановлением документов. В некоторых случаях могут понадобиться медицинские справки, но это рассматривается индивидуально. Главное — ваше желание получить помощь и работать над улучшением своей ситуации.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Сколько можно оставаться в рабочем доме?</div>
+                <div class="faq-answer">
+                    <p>Срок пребывания в рабочем доме зависит от вашей ситуации и прогресса в решении проблем. Обычно это от нескольких недель до нескольких месяцев. Мы помогаем каждому подопечному достичь стабильности и подготовиться к самостоятельной жизни, после чего происходит плановый выезд.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Какие гарантии безопасности и прав?</div>
+                <div class="faq-answer">
+                    <p>Все подопечные находятся под защитой закона и имеют гарантии соблюдения их прав. Мы предоставляем безопасное окружение, конфиденциальность, уважительное отношение и профессиональную помощь. Наша организация зарегистрирована и действует в соответствии с российским законодательством.</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">Есть ли возможность трудоустройства?</div>
+                <div class="faq-answer">
+                    <p>Да, мы активно помогаем в трудоустройстве. Предоставляем временную работу с оплатой внутри рабочего дома, а также помогаем находить внешние возможности трудоустройства. Наши сотрудники помогают составить резюме, подготовиться к собеседованиям и развить профессиональные навыки.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <h2>Отзывы</h2>
+            <div class="testimonials">
+                <div class="testimonial">
+                    <p>"После потери работы и жилья я оказался на улице. Рабочий дом стал для меня спасением. Меня обеспечили едой и местом для ночлега, помогли восстановить документы и найти временную работу. Через три месяца я смог снять квартиру и устроиться на постоянную работу. Благодарю всех, кто там работает!"</p>
+                    <p><strong>- Алексей, Москва</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"После освобождения из колонии мне было некуда идти. Рабочий дом дал мне шанс на новую жизнь. Здесь не только обеспечили базовыми вещами, но и психологически поддержали. Помогли восстановить документы, найти работу. Сейчас у меня есть постоянное место жительства и работа."</p>
+                    <p><strong>- Дмитрий, после освобождения</strong></p>
+                </div>
+                <div class="testimonial">
+                    <p>"Моя сестра потеряла связь с семьей и оказалась в трудной ситуации. Обратились в рабочий дом, и они оказали ей всю необходимую помощь. Спасибо за профессионализм и чуткость!"</p>
+                    <p><strong>- Анна, родственница подопечного</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="form">
+        <div class="container">
+            <h2>Связаться с нами</h2>
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <div style="margin-bottom: 15px;">
+                        <label for="name" style="display: block; margin-bottom: 5px;">Ваше имя:</label>
+                        <input type="text" id="name" name="name" style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="phone" style="display: block; margin-bottom: 5px;">Телефон:</label>
+                        <input type="tel" id="phone" name="phone" style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;" required>
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="email" style="display: block; margin-bottom: 5px;">Email:</label>
+                        <input type="email" id="email" name="email" style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;">
+                    </div>
+                    <div style="margin-bottom: 15px;">
+                        <label for="message" style="display: block; margin-bottom: 5px;">Сообщение:</label>
+                        <textarea id="message" name="message" rows="4" style="width: 100%; padding: 10px; border: 1px solid #ced4da; border-radius: 4px;"></textarea>
+                    </div>
+                    <button type="submit" style="background-color: #0d6efd; color: white; padding: 12px 30px; border: none; border-radius: 4px; cursor: pointer;">Отправить заявку</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Рабочий дом в Москве</h3>
+                    <p>Оказываем помощь людям, оказавшимся в трудной жизненной ситуации, с 2010 года.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <ul>
+                        <li>Телефон: +7 (495) 123-45-67</li>
+                        <li>Email: info@rabdom-mos.ru</li>
+                        <li>WhatsApp: +7 (495) 123-45-67</li>
+                        <li>Telegram: @workinghouse_moscow</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Адрес</h3>
+                    <ul>
+                        <li>г. Москва, ул. Примерная, д. 123</li>
+                        <li>Часы работы: круглосуточно</li>
+                        <li>Прием осуществляется по предварительной записи</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Полезные ссылки</h3>
+                    <ul>
+                        <li><a href="#">О нас</a></li>
+                        <li><a href="#">Услуги</a></li>
+                        <li><a href="#">Как помочь</a></li>
+                        <li><a href="#">Отчеты</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Рабочий дом в Москве. Все права защищены. | рабочий дом москва помощь людям | помощь людям в трудной жизненной ситуации | социальный рабочий дом</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
